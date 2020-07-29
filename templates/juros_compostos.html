@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+
+        button {
+            color: white;
+        }
+
+        .cifrao1{
+            position: absolute;
+            opacity: 50%;
+        }
+        
+        .cifrao2{
+            position: absolute;
+            opacity: 50%;
+            top: 60%;
+            left: 80%;
+        }
+        
+        .principal{
+            position:  absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        
+        .select{
+            position:  absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btnselect{
+            position:  absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .btncalculo{
+            position:  absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .form_calculo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        input{
+            position: absolute;
+            left: 80%;
+        }
+
+        pre, h1, p{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        button{
+            background-color: #3eca6d;
+            color: #DCDCDC;
+            border-color: #2e8f4e;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: Arial;
+            padding: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        button {
+            color: white;
+        }
+    </style>
+
+    <img class="cifrao1" src="https://thumbs.dreamstime.com/b/doodle-do-sinal-do-dinheiro-22063672.jpg" width="195" height="225">
+    <img class="cifrao2" src="https://thumbs.dreamstime.com/b/doodle-do-sinal-do-dinheiro-22063672.jpg" width="195" height="225">
+    
+</head>
+<body>
+    <form action="/selecionar" method="POST">
+        <h1 class="principal">ESCOLHA UMA DAS OPÇÕES</h1>
+        <select name="selecao" class="select">
+            <option value="js">Juros Simples</option>
+            <option value="jc">Juros Compostos</option>
+        </select>
+        <button type="submit" name="seleção" value="escolher" class="btnselect">Certo</button>
+    </form>
+
+    <form action="/composto" method="POST" class="form_calculo">
+        <h1><pre>Juros Compostos</pre></h1>
+        <p>
+            Capital a ser investido: 
+            <input type="text" size="10" name="capital">
+        </p>
+
+        <p>
+            Taxa de juros:
+            <input type="text" size="10" name="taxa_juros">
+        </p>
+
+        <p>
+            Tempo ao mês: 
+            <input type="text" size="10" name="tempo">
+        </p>
+        <p>Juros simples<br>
+        <pre>Juros:                                       R${{juros}}</pre>
+        <pre>Montante:                                 R${{montante}}</pre>
+    
+        <button type="submit" name="botao" value="calcular" class="btncalculo">Calcular</button>
+    </form>
+
+</body>
+
+</html>

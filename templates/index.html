@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Calculadora de juros</title>
+    <style>
+        h1{
+            position:  absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        select{
+            position:  absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button{
+            position:  absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            background-color: #3eca6d;
+            color: #DCDCDC;
+            border-color: #2e8f4e;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: Arial;
+            padding: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        button {
+            color: white;
+        }
+
+        .cifrao1{
+            position: absolute;
+            opacity: 50%;
+        }
+        
+        .cifrao2{
+            position: absolute;
+            opacity: 50%;
+            top: 60%;
+            left: 80%;
+        }
+    </style>
+    <img class="cifrao1" src="https://thumbs.dreamstime.com/b/doodle-do-sinal-do-dinheiro-22063672.jpg" width="195" height="225">
+    <img class="cifrao2" src="https://thumbs.dreamstime.com/b/doodle-do-sinal-do-dinheiro-22063672.jpg" width="195" height="225">
+
+</head>
+<body class="container">
+    <form action="/selecionar" method="POST" class="forma">
+        <h1>ESCOLHA UMA DAS OPÇÔES</h1>
+
+        <select name="selecao">
+            <option value="js">Juros Simples</option>
+            <option value="jc">Juros Compostos</option>
+        </select>
+        <button type="submit" name="seleção" value="escolher">Certo</button>
+    </form>
+</body>
+
+</html>

@@ -43,21 +43,25 @@
         
         .btncalculo{
             position:  absolute;
-            top: 120%;
+            top: 55%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, 0%);
         }
 
         .form_calculo{
             position: absolute;
-            top: 50%;
+            top: 30%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 500px;
+            transform: translate(-50%, 0%);
         }
         
         input{
             position: absolute;
             left: 80%;
+            height: 35px;
+            width: 150px;
         }
 
         pre, h1, p{
@@ -80,6 +84,56 @@
         button {
             color: white;
         }
+        .capital{
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+        .taxa{
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+        .tempo{
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+        .resultado{
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            width: 350px;
+            height: 100px;
+            transform: translate(-50%, 0%);
+        }
+        h1{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+        .txt_juros{
+            top:  5%;
+            left: 40%;
+            position: absolute;
+            transform: translate(-100%, 0%);
+        }
+        .txt_monte{
+            top: 30%;
+            left: 40%;
+            position: absolute;
+            transform: translate(-100%, 0%);
+        }
+        .res_ju{
+            top: 5%;
+            left: 60%;
+            position: absolute;
+        }
+        .monte{
+            top: 30%;
+            left: 60%;
+            position: absolute;
+        }
     </style>
 
     <img class="cifrao1" src="https://thumbs.dreamstime.com/b/doodle-do-sinal-do-dinheiro-22063672.jpg" width="195" height="225">
@@ -97,26 +151,15 @@
     </form>
 
     <form action="/composto" method="POST" class="form_calculo">
-        <h1><pre>Juros Compostos</pre></h1>
-        <p>
-            Capital a ser investido: 
-            <input type="text" size="10" name="capital">
-        </p>
-
-        <p>
-            Taxa de juros:
-            <input type="text" size="10" name="taxa_juros">
-        </p>
-
-        <p>
-            Tempo ao mês: 
-            <input type="text" size="10" name="tempo">
-        </p>
-        <p>Juros simples<br>
-        <pre>Juros:                                       R${{juros}}</pre>
-        <pre>Montante:                                 R${{montante}}</pre>
-    
-        <button type="submit" name="botao" value="calcular" class="btncalculo">Calcular</button>
+        <h1><pre>Juros Compostos</h1>
+            <input type="text" size="10" name="capital" placeholder="Capital a ser investido!" class="capital">
+            <input type="text" size="10" name="taxa_juros" placeholder="Taxa de Juros" class="taxa">
+            <input type="text" size="10" name="tempo" placeholder="Meses" class="tempo">
+            <button type="submit" name="botao" value="calcular" class="btncalculo">Calcular</button>
+            <div class="resultado">
+                <pre class="txt_juros">Juros:</pre><pre class="res_ju">R$ {{juros}}</pre>
+                <pre class="txt_monte">Montante:</pre><pre class="monte">R$ {{montante}}</pre>
+            </div>
     </form>
 
 </body>
